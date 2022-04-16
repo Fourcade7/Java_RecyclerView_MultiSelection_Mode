@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <Toolbar
+        android:background="@color/purple_500"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Multi Selection"
+                android:textColor="@color/white"
+                android:id="@+id/textviewcounter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></TextView>
+            <RelativeLayout
+                android:visibility="invisible"
+                android:id="@+id/relativelay2"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                android:layout_marginRight="15dp"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+
+                    android:src="@drawable/ic_baseline_delete_24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></ImageView>
+                <TextView
+                    android:id="@+id/textviewcounter2"
+                    android:text="10"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                   android:textSize="7dp"
+                    android:padding="2dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/ic_baseline_lens_24"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"></TextView>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </Toolbar>
+
+
+
+    <EditText
+        android:padding="10dp"
+        android:background="@drawable/edittextbackground"
+        android:layout_margin="10dp"
+        android:hint="Search"
+        android:drawableRight="@drawable/ic_baseline_search_24"
+        android:id="@+id/edittextsearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></EditText>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>
