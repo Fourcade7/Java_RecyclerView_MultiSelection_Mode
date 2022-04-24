@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -72,5 +73,18 @@ public class MainActivity extends AppCompatActivity {
         }
 
        userAdapter.filterlist(users);
+    }
+
+    @Override
+    public void onBackPressed() {
+        for (int i = 0; i < userArrayList.size() ; i++) {
+            userArrayList.get(i).setSelect(false);
+            userAdapter.a=0;
+            userAdapter.notifyDataSetChanged();
+            relativeLayout.setVisibility(View.INVISIBLE);
+            textView.setText("Hi");
+
+
+        }
     }
 }
